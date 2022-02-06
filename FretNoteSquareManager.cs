@@ -14,7 +14,7 @@ public class FretNoteSquareManager : MonoBehaviour
    
     // Start is called before the first frame update
     void Start()
-    {
+    {   //InitialiZe Note Propertiesas fjkabfJIHABFUIhafvkFS
         beatTempo = beatTempo / 60f;
         GameObject newNote = Instantiate(notePrefab, new Vector3(18f, 1f, -2.5f), Quaternion.identity);
         newNote.transform.SetParent(noteHolder.transform);
@@ -27,7 +27,7 @@ public class FretNoteSquareManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         if (newNotes.Count != 0)
         {
             foreach(GameObject note in newNotes)
@@ -35,7 +35,7 @@ public class FretNoteSquareManager : MonoBehaviour
                 note.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
                 note.transform.localPosition += new Vector3(0f, 0f, beatTempo * Time.deltaTime);
                  
-                if(note.transform.localPosition.z > 50)
+                if(note.transform.lssocalPosition.z > 50)
                 {
                     Destroy(note);
                     newNotes.Remove(note);
